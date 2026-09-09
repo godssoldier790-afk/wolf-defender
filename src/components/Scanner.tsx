@@ -15,9 +15,13 @@ export function Scanner({ onScan, busy }: { onScan: (url: string) => void; busy:
     <section className="rounded-xl bg-surface p-5 sm:p-7">
       <div className="mb-4 flex justify-center sm:justify-start">
         <img
-          src="/wolf-mark.svg"
+          src="/logo.jpg"
           alt="WOLF SIGNAL"
           className="h-36 w-auto rounded-md object-contain sm:h-44"
+          onError={(event) => {
+            event.currentTarget.onerror = null;
+            event.currentTarget.src = "/wolf-mark.svg";
+          }}
         />
       </div>
       <p className="text-xs tracking-wide text-muted uppercase">Analyze a URL</p>
