@@ -38,7 +38,7 @@ Vite, React 19, TypeScript, Tailwind v4.
 
 Same visual quality bar as [Tinybar](https://github.com/godssoldier790-afk/tinybar): dark surface, mono tabular stats, semantic color rail. Palette is iron / signal crimson / frost.
 
-## Run
+## Run locally
 
 ```bash
 npm install
@@ -48,21 +48,31 @@ npm run dev
 
 Vite on `:5173`, Express analyzer on `:8787`. Paste a link or use one of the sample chips.
 
+## Deploy on Vercel
+
+Repo-side settings are in `vercel.json` (Vite build → `dist`, SPA rewrite, `/api/*` serverless).
+
+1. Open https://vercel.com/new
+2. Import **godssoldier790-afk/wolf-defender**
+3. Framework Preset: **Vite**
+4. Build Command: `npx vite build`
+5. Output Directory: `dist`
+6. Install Command: `npm install`
+7. Deploy
+
+`POST /api/analyze` and `GET /api/health` are serverless wrappers around the same hop follower. If the API is down, the UI falls back to static heuristics.
+
 ## Tests
 
 ```bash
 npm test
 ```
 
-Locked fixtures live in `src/lib/fixtures.ts`. Cases include a safe site, a shortener, a PayPal lookalike, an IP-literal login host, a private-IP SSRF reject, a brand-as-subdomain bait, a punycode homograph, a `javascript:` block, and official-brand login paths that must **not** be flagged as typosquat.
+Locked fixtures live in `src/lib/fixtures.ts`.
 
 ## Logo
 
-Header and Scanner currently use `public/wolf-mark.svg` so a clone does not 404.
-
-Official artwork is the WOLF SIGNAL raster (charcoal wolf, red eyes, warning beacon) in the project zip as `public/logo.jpg` and `public/logo-mark.jpg`. GitHub file-write tools in this build session are text-only, so the JPG is not in the repo yet.
-
-To install it: **Add file → Upload files** into `public/logo.jpg` (and `logo-mark.jpg`), then point `src/components/Mark.tsx` and `src/components/Scanner.tsx` at those paths.
+Header and Scanner try `/logo.jpg` and fall back to `public/wolf-mark.svg`.
 
 ## Limits
 
