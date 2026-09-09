@@ -14,7 +14,11 @@ export function Scanner({ onScan, busy }: { onScan: (url: string) => void; busy:
   return (
     <section className="rounded-xl bg-surface p-5 sm:p-7">
       <div className="mb-4 flex justify-center sm:justify-start">
-        <img src="/logo.jpg" alt="WOLF SIGNAL" className="h-36 w-auto rounded-md object-contain sm:h-44" />
+        <img
+          src="/wolf-mark.svg"
+          alt="WOLF SIGNAL"
+          className="h-36 w-auto rounded-md object-contain sm:h-44"
+        />
       </div>
       <p className="text-xs tracking-wide text-muted uppercase">Analyze a URL</p>
       <p className="mt-1 font-display text-2xl tracking-tight">Where does this link actually go?</p>
