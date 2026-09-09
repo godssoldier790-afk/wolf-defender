@@ -67,6 +67,17 @@ export interface IntelHit {
   listedAt?: string;
 }
 
+export interface DestinationPeek {
+  inspected: boolean;
+  title: string | null;
+  status: number | null;
+  contentType: string | null;
+  bytesRead: number;
+  loginFormDetected: boolean;
+  executableHint: boolean;
+  obfuscatedJs: boolean;
+}
+
 export interface ScanReport {
   id: string;
   scannedAt: number;
@@ -76,6 +87,7 @@ export interface ScanReport {
   hops: RedirectHop[];
   indicators: Indicator[];
   intel: IntelHit[];
+  destination: DestinationPeek | null;
   risk: number;
   band: RiskBand;
   confidence: number;
