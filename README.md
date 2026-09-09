@@ -36,16 +36,17 @@ This is a protection tool. It does **not** generate phishing pages, tracking pix
 
 Vite, React 19, TypeScript, Tailwind v4.
 
-Same visual quality bar as [Tinybar](https://github.com/godssoldier790-afk/tinybar): dark surface, mono tabular stats, semantic color rail. Palette is iron / gold / frost instead of Tinybar blue.
+Same visual quality bar as [Tinybar](https://github.com/godssoldier790-afk/tinybar): dark surface, mono tabular stats, semantic color rail. Palette is iron / signal crimson / frost.
 
 ## Run
 
 ```bash
 npm install
+npm test
 npm run dev
 ```
 
-Then open the printed local URL and paste a link, or use one of the sample chips.
+Vite on `:5173`, Express analyzer on `:8787`. Paste a link or use one of the sample chips.
 
 ## Tests
 
@@ -57,7 +58,11 @@ Locked fixtures live in `src/lib/fixtures.ts`. Cases include a safe site, a shor
 
 ## Logo
 
-`public/wolf-mark.svg` ships a wolf + shield mark. Replace it with the Grok Imagine asset from `https://grok.com/imagine/post/a4f636d9-2f06-4e24-8a94-5a538edec556` when you have a downloadable PNG.
+Header and Scanner currently use `public/wolf-mark.svg` so a clone does not 404.
+
+Official artwork is the WOLF SIGNAL raster (charcoal wolf, red eyes, warning beacon) in the project zip as `public/logo.jpg` and `public/logo-mark.jpg`. GitHub file-write tools in this build session are text-only, so the JPG is not in the repo yet.
+
+To install it: **Add file → Upload files** into `public/logo.jpg` (and `logo-mark.jpg`), then point `src/components/Mark.tsx` and `src/components/Scanner.tsx` at those paths.
 
 ## Limits
 
