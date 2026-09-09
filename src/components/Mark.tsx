@@ -1,9 +1,12 @@
 export function WolfMark({ className = "h-16 w-auto" }: { className?: string }) {
   return (
     <img
-      src="/logo.jpg"
+      src="/wolf-mark.svg"
       alt="WOLF SIGNAL mark for WOLF DEFENDER"
       className={className}
+      onError={(event) => {
+        event.currentTarget.src = "/wolf-mark.svg";
+      }}
     />
   );
 }
