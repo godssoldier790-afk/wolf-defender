@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Syne", "IBM Plex Sans", sans-serif;
+
+  --color-night: #07090e;
+  --color-surface: #0e131b;
+  --color-elevated: #151c27;
+  --color-border: #243044;
+  --color-ink: #e8edf5;
+  --color-muted: #8b97ab;
+  --color-subtle: #5c6a80;
+  --color-gold: #d4a017;
+  --color-frost: #9eb6d4;
+  --color-safe: #3ecf8e;
+  --color-caution: #e6b84c;
+  --color-danger: #e85d5d;
+  --color-critical: #ff3b3b;
+  --color-info: #6ea8ff;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: var(--color-night);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-image:
+    radial-gradient(1200px 500px at 12% -10%, rgba(212, 160, 23, 0.08), transparent 50%),
+    radial-gradient(900px 400px at 90% 0%, rgba(158, 182, 212, 0.06), transparent 45%);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
