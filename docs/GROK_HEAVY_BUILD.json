@@ -1,0 +1,18 @@
+{
+  "name": "WOLF DEFENDER",
+  "title": "Safe URL Redirect & Threat Analyzer",
+  "mode": "defensive",
+  "parameters": {
+    "input_url": { "type": "string", "required": true },
+    "max_redirects": { "type": "integer", "default": 10 },
+    "request_timeout_seconds": { "type": "integer", "default": 15 },
+    "follow_http_redirects": { "type": "boolean", "default": true },
+    "detect_meta_refresh": { "type": "boolean", "default": true },
+    "detect_client_redirects": { "type": "boolean", "default": true },
+    "resolve_dns": { "type": "boolean", "default": true },
+    "analyze_headers": { "type": "boolean", "default": true },
+    "threat_intelligence": { "type": "boolean", "default": true },
+    "content_analysis": { "type": "boolean", "default": true },
+    "safe_retrieval_mode": { "type": "boolean", "default": true }
+  }
+}
